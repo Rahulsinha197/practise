@@ -1,10 +1,14 @@
-import React, { useState } from "react";
-import { Button } from "@material-ui/core";
+import React, { useState, useEffect } from "react";
+import { Button, FormControl, Input, InputLabel } from "@material-ui/core";
 import "./App.css";
+import Todo from "./component/Todo";
 
 function App() {
-  const [todos, setTodos] = useState(["Go to sleep", "wake up", "awake"]);
+  const [todos, setTodos] = useState([]);
   const [input, setInput] = useState("");
+  useEffect(() => {
+    console.log(todos);
+  }, [todos]);
 
   const addTodo = (event) => {
     event.preventDefault(); //stops refresh
@@ -13,21 +17,39 @@ function App() {
     setInput(""); //clear the input after hitting submit
   };
 
+  const deleteTodo = (val) => {
+    console.log(val);
+    var index = todos.indexOf(val);
+    const todoCpy = [...todos];
+    if (index > -1) {
+      todoCpy.splice(index, 1);
+      setTodos(todoCpy);
+    }
+  };
+
   return (
     <div className="App">
       <h1>Hello World</h1>
-      <input value={input} onChange={(event) => setInput(event.target.value)} />
+      <FormControl>
+        <InputLabel> Write a Todo</InputLabel>
+        <Input
+          value={input}
+          onChange={(event) => setInput(event.target.value)}
+        />
+      </FormControl>
       <Button
+        disabled={!input}
         type="submit"
         onClick={addTodo}
         variant="contained"
-        color="primary"
+        color="secondary"
       >
         Add Todo
       </Button>
       <ul>
-        {todos.map((todo) => (
-          <li>{todo}</li>
+        {todos.map((todo, i) => (
+          <Todo key={i} text={todo} deleteTodo={deleteTodo} />
+          //<li>{todo}</li>
         ))}
       </ul>
     </div>
