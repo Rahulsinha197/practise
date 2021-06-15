@@ -27,6 +27,13 @@ function App() {
     }
   };
 
+  const updateList = (value, i) => {
+    console.log(value, i);
+    const newTodos = [...todos];
+    newTodos[i] = value;
+    setTodos(newTodos);
+  };
+
   return (
     <div className="App">
       <h1>Hello World</h1>
@@ -48,7 +55,13 @@ function App() {
       </Button>
       <ul>
         {todos.map((todo, i) => (
-          <Todo key={i} text={todo} deleteTodo={deleteTodo} />
+          <Todo
+            key={i}
+            text={todo}
+            deleteTodo={deleteTodo}
+            updateList={updateList}
+            index={i}
+          />
           //<li>{todo}</li>
         ))}
       </ul>

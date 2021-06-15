@@ -31,13 +31,14 @@ function Todo(props) {
     setOpen(true);
   };
 
-  const updateTodo = () => {
+  const updateTodo = (i) => {
     //update the todo list with new input
+    props.updateList(input, i);
     setOpen(false);
   };
   return (
     <>
-      <Modal open={open} onClose={(e) => setOpen(false)}>
+      <Modal open={open} onClose={handleOpen}>
         <div className={classes.paper}>
           <h1>i am a modal</h1>
           <input
@@ -45,7 +46,7 @@ function Todo(props) {
             value={input}
             onChange={(event) => setInput(event.target.value)}
           />
-          <Button onClick={(e) => setOpen(false)}></Button>
+          <Button onClick={() => updateTodo(props.index)}>Update</Button>
         </div>
       </Modal>
       <List className="">
@@ -54,10 +55,7 @@ function Todo(props) {
           <ListItemText primary={props.text} secondary="dummy" />
         </ListItem>
         <button onClick={(e) => setOpen(true)}>Edit</button>
-        <DeleteForeverIcon>
-          {" "}
-          onClick={() => props.deleteTodo(props.text)}> Delete me{" "}
-        </DeleteForeverIcon>
+        <DeleteForeverIcon onClick={() => props.deleteTodo(props.text)} />
       </List>
     </>
   );
