@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
-import {
-  Button,
-  List,
-  ListItem,
-  ListItemText,
-  ListItemAvatar,
-  Modal,
-} from "@material-ui/core";
+import { Button, List, ListItem, ListItemText, Modal } from "@material-ui/core";
 import "./Todo.css";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -51,7 +44,6 @@ function Todo(props) {
       </Modal>
       <List className="">
         <ListItem>
-          <ListItemAvatar></ListItemAvatar>
           <ListItemText primary={props.text} secondary="dummy" />
         </ListItem>
         <button onClick={(e) => setOpen(true)}>Edit</button>

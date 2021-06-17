@@ -19,7 +19,7 @@ function App() {
 
   const deleteTodo = (val) => {
     console.log(val);
-    var index = todos.indexOf(val);
+    const index = todos.indexOf(val);
     const todoCpy = [...todos];
     if (index > -1) {
       todoCpy.splice(index, 1);
