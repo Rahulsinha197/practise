@@ -1,15 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/E-commerce-cart-master/node_modules
-/stock-query/node_modules
-/todo_list/node_modules
-/redux-mui-crud/node_modules
-/redux-mui-crud/.env
-
-
+/node_modules
 /.pnp
 .pnp.js
+.env
 
 # testing
 /coverage
