@@ -60,7 +60,7 @@ const AddUser = () => {
         Go Back
       </Button>
       <h2>Add User</h2>
-      {error && <h3 style={{ color: "red" }}>{error}</h3>}
+      {error && <h3 className="erpop">{error}</h3>}
       <form
         className={classes.root}
         noValidate
