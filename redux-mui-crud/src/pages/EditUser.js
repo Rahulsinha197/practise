@@ -5,6 +5,7 @@ import Button from "@material-ui/core/Button";
 import { useHistory, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getSingleUser, updateUser } from "../redux/actions";
+import "../pages/EditUser.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -64,7 +65,7 @@ const EditUser = () => {
   return (
     <div>
       <Button
-        style={{ width: "100px", marginTop: "20px" }}
+        className="edit"
         variant="contained"
         color="secondary"
         onClick={() => history.goBack()}

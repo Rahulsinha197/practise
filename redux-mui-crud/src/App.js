@@ -1,8 +1,10 @@
+import { lazy } from "react";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import AddUser from "./pages/AddUser";
-import EditUser from "./pages/EditUser";
+
+const HomePage = lazy(() => import("./pages/HomePage"));
+const AddUser = lazy(() => import("./pages/AddUser"));
+const EditUser = lazy(() => import("./pages/EditUser"));
 
 function App() {
   return (

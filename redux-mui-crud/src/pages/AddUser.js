@@ -5,6 +5,7 @@ import Button from "@material-ui/core/Button";
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../redux/actions";
+import "../pages/AddUser.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -51,7 +52,7 @@ const AddUser = () => {
   return (
     <div>
       <Button
-        style={{ width: "100px", marginTop: "20px" }}
+        className="add"
         variant="contained"
         color="secondary"
         onClick={() => history.push("./")}
