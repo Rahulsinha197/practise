@@ -1,0 +1,28 @@
+{
+  "user": [
+    {
+      "id": 2,
+      "first_name": "Steven",
+      "last_name": "Palmer",
+      "address": "Surat",
+      "contact": "11223355",
+      "email": "steve@codingthesmartway.com"
+    },
+    {
+      "first_name": "sdfcc",
+      "last_name": "qwertt",
+      "email": "sdfddf@gmail.com",
+      "contact": "13456678",
+      "address": "asdffgggg",
+      "id": 4
+    },
+    {
+      "first_name": "Rahul",
+      "last_name": "SInha",
+      "email": "ndjsbf@dhb.com",
+      "contact": "09348374346",
+      "address": "hdsfhjfhsjdhf",
+      "id": 5
+    }
+  ]
+}
