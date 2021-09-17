@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import HoverCounterTwo from "../components/HoverCounterTwo";
 import ClickCounterTwo from "../components/ClickCounterTwo";
-import User from "../components/User";
 import Counter from "../components/Counter";
 
 export default class Visit extends Component {
