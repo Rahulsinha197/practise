@@ -4,10 +4,10 @@ import DocTitleTwo from "../components/DocTitleTwo";
 
 function VisitCustom() {
   return (
-    <div>
+    <React.Fragment>
       <DocTitleOne />
       <DocTitleTwo />
-    </div>
+    </React.Fragment>
   );
 }
 
