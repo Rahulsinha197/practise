@@ -9,6 +9,7 @@ const ClickCounter = lazy(() => import("./components/ClickCounter"));
 const HoverCounter = lazy(() => import("./components/HoverCounter"));
 const Visit = lazy(() => import("./pages/Visit.js"));
 const VisitCustom = lazy(() => import("./pages/VisitCustom.js"));
+const VisitRef = lazy(() => import("./pages/VisitRef.js"));
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/hoverCounter" component={HoverCounter} />
           <Route exact path="/visit" component={Visit} />
           <Route exact path="/visitCustom" component={VisitCustom} />
+          <Route exact path="/visitRef" component={VisitRef} />
         </Switch>
       </Suspense>
     </div>
